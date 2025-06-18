@@ -1,54 +1,37 @@
-# React + TypeScript + Vite
+# 🧠 AI-Powered Serverless Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a serverless web application built using modern AWS services. It takes user input and generates intelligent responses using a large language model (LLM) via Amazon Bedrock. The app is designed with scalability, cost-efficiency, and security in mind — making it a solid foundation for generative AI use cases.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Purpose of the Application
 
-## Expanding the ESLint configuration
+The app allows users to input a prompt and receive an AI-generated response. It’s ideal for tasks like:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Generating recipe suggestions
+- Providing short explanations or summaries
+- Creating creative or helpful content on the fly
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Technologies Used
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Technology         | Description                                      |
+|--------------------|--------------------------------------------------|
+| **AWS Amplify**    | Project management, CI/CD, and frontend hosting  |
+| **AWS Lambda**     | Serverless backend logic                         |
+| **Amazon Bedrock** | AI model (Claude) integration                    |
+| **Amazon Cognito** | User authentication with email verification      |
+| **IAM**            | Permission management and security policies      |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## 🎓 What I Learned
+
+- How to use **Amplify CLI** to scaffold and deploy a full-stack serverless app
+- How to invoke **Amazon Bedrock** from a Lambda function and handle AI responses
+- How to implement **user sign-up, login, and verification** using Amazon Cognito
+- The importance of **IAM roles and scoped permissions** for secure architecture
+- How to build an AI-powered backend workflow **without relying on a frontend UI**
+
+---
